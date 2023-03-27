@@ -24,7 +24,7 @@
                         <div class="navmenu hidden w-full flex-wrap justify-end items-center mb-16 space-y-8 p-6 border border-gray-100 rounded-3xl shadow-2xl shadow-gray-300/20 bg-white dark:bg-gray-800 lg:space-y-0 lg:p-0 lg:m-0 lg:flex md:flex-nowrap lg:bg-transparent lg:w-7/12 lg:shadow-none dark:shadow-none dark:border-gray-700 lg:border-0">
         
                             <div class="w-full space-y-2 border-primary/10 dark:border-gray-700 flex flex-col -ml-1 sm:flex-row lg:space-y-0 md:w-max">
-                                <a href="#" class="relative flex h-12 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full focus:before:bg-red-600/10 dark:focus:before:bg-red-400/10 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
+                                <a @onclick:preventDefault onclick="scrollToElement('about')" class="relative flex h-12 ml-auto items-center justify-center cursor-pointer sm:px-6 before:absolute before:inset-0 before:rounded-full focus:before:bg-red-600/10 dark:focus:before:bg-red-400/10 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
                                     <span class="relative text-sm font-semibold text-primary dark:text-primaryLight">A propos de nous</span>                    
                                 </a>
                             </div>
@@ -35,12 +35,12 @@
         </header>
         <!-- Hero section -->
         <section class="bg-slate-100 dark:bg-slate-100">
-            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full sm:min-h-[90vh] lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
                     <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
                         <div class="max-w-xl mb-6">
                         <h2 class="max-w-lg mb-6 text-center sm:text-left font-sans text-blue-900 dark:text-blue-900 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl sm:leading-none">
-                            Nous fournissons des équipements Scientifiques
+                            Nous fournissons des équipements de laboratoire et bien d'autres
                         </h2>
                         <p class="text-base text-center sm:text-left text-gray-700 md:text-lg">
                             Découvrez Notre Catalogue! Vous y retrouverez la liste de nos differents produits pour vous faciliter l'achat chez nous
@@ -53,18 +53,27 @@
                         </div>
                     </div>
                     <div class="flex items-center justify-center lg:w-1/2">
-                        <div class="w-2/5">
-                            <img class="object-cover" src="https://kitwind.io/assets/kometa/one-girl-phone.png" alt="" />
+                        <div class="w-5/12">
+                            <img class="object-cover" src="product05.png" alt="" />
                         </div>
                         <div class="w-5/12 -ml-16 lg:-ml-32">
-                            <img class="object-cover" src="https://kitwind.io/assets/kometa/two-girls-phone.png" alt="" />
+                            <img class="object-cover" src="product02.png" alt="" />
+                        </div>
+                        <div class="w-5/12 -ml-16 lg:-ml-32">
+                            <img class="object-cover" src="product03.png" alt="" />
+                        </div>
+                        <div class="w-5/12 -ml-16 lg:-ml-32">
+                            <img class="object-cover" src="product04.png" alt="" />
+                        </div>
+                        <div class="w-5/12 -ml-16 lg:-ml-32">
+                            <img class="object-cover" src="product01.png" alt="" />
                         </div>
                     </div>
                 </div>
                 <a
                     @onclick:preventDefault onclick="scrollToElement('contact')"
                     aria-label="Scroll down"
-                    class="flex items-center justify-center w-10 h-10 mx-auto text-gray-600 duration-300 transform border border-gray-400 rounded-full hover:text-deep-purple-accent-400 hover:border-deep-purple-accent-400 hover:shadow hover:scale-110"
+                    class="flex items-center justify-center cursor-pointer w-10 h-10 sm:mt-16 mx-auto text-gray-600 duration-300 transform border border-gray-400 rounded-full hover:text-deep-purple-accent-400 hover:border-deep-purple-accent-400 hover:shadow hover:scale-110"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                         <path d="M10.293,3.293,6,7.586,1.707,3.293A1,1,0,0,0,.293,4.707l5,5a1,1,0,0,0,1.414,0l5-5a1,1,0,1,0-1.414-1.414Z"></path>
@@ -74,18 +83,26 @@
         </section>
   
         <!-- About section -->
-        <section class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <section id="about" class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div class="flex flex-col items-center justify-center min-h-[50vh] w-full mb-10">
                 <h2 class="max-w-lg mb-6 text-center font-sans text-red-500 dark:text-red-500 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl sm:leading-none">
                     À Propos De Nous
                 </h2>
-                <p class="text-base text-gray-700 md:text-lg">
-                    Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Voluptatibus Doloribus, At Dolore Id Rem Nam Asperiores
-                    Sit Reprehenderit Nihil, Excepturi Exercitationem Nesciunt, Accusamus Obcaecati Hic Totam Dignissimos Eaque
-                    Error Nulla. Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Perferendis Voluptas Distinctio Placeat Minus
-                    Debitis Sit Magnam Culpa Ratione Atque Velit? Consequuntur Vitae Velit Dicta Nobis Vero! Repellendus Sit
-                    DolorIbus Consectetur
-                </p>
+                <div>
+                    <p class="text-base text-gray-700 md:text-lg">
+                        Nous sommes fournisseurs de bien et services aux industriels 
+                        et aux particuliers (mining, entreprises, universités, écoles, hôpitaux...).
+                    </p>
+                    <p class="text-base text-gray-700 md:text-lg">
+                        Nous sommes spécialisés dans une large gamme de produits et services tels que : équipements de laboratoire, 
+                        consommables, agriculture, traitement des eaux, équipements civils et environnementaux et bien d'autres. 
+                        Celà nous permet d'offrir à nos clients une solution globale à leurs besoins.
+                    </p>
+                    <p class="text-base text-gray-700 md:text-lg">
+                        Nos bureaux sont basés à Lubumbashi en République Démocratique du Congo et à Johannesburg en Afrique 
+                        du Sud avec la possibilité de sévir des clients dans toute l'Afrique.
+                    </p>
+                </div>
             </div>
         </section>
         <!-- Footer -->
@@ -98,21 +115,21 @@
                         </a>
                     </div>
                     <div class="grow">
-                        <h2 class="max-w-lg mb-4 font-bold text-xl tracking-tight text-gray-900 sm:text-xl sm:leading-none">
+                        <h2 class="max-w-lg mb-4 font-semi-bold text-xl tracking-tight text-gray-900 sm:text-xl sm:leading-none">
                             ADRESSE
                         </h2>
-                        <p class="text-base max-w-sm text-gray-700 md:text-md">
+                        <p class="text-sm max-w-sm text-gray-700 md:text-md">
                             Avenue Kilwa No. 7777, Lido Golf (Ref. Croisement Avenue Ruwe & Avenue Kilwa)
                         </p>
                     </div>
                     <div class="grow">
-                        <h2 class="max-w-lg mb-4 font-bold text-xl tracking-tight text-gray-900 sm:text-xl sm:leading-none">
+                        <h2 class="max-w-lg mb-4 font-semi-bold text-xl tracking-tight text-gray-900 sm:text-xl sm:leading-none">
                             CONTACT
                         </h2>
-                        <p class="text-base text-gray-700 md:text-md">
+                        <p class="text-sm text-gray-700 md:text-md">
                             Tel: +243 XXX XXX XX
                         </p>
-                        <p class="text-base text-gray-700 md:text-md">
+                        <p class="text-sm text-gray-700 md:text-md">
                             Email: sales@uscientif.com
                         </p>
                     </div>
