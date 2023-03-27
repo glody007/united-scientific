@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <a
-                    href="/"
+                    @onclick:preventDefault onclick="scrollToElement('contact')"
                     aria-label="Scroll down"
                     class="flex items-center justify-center w-10 h-10 mx-auto text-gray-600 duration-300 transform border border-gray-400 rounded-full hover:text-deep-purple-accent-400 hover:border-deep-purple-accent-400 hover:shadow hover:scale-110"
                 >
@@ -89,7 +89,7 @@
             </div>
         </section>
         <!-- Footer -->
-        <footer class="bg-slate-100 dark:bg-slate-100">
+        <footer class="bg-slate-100 dark:bg-slate-100" id="contact">
             <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between min-h-[10vh] w-full mb-10 space-y-4">
                     <div class="grow">
@@ -119,5 +119,12 @@
                 </div>
             </div>
         </footer>
+        <script>      
+            function scrollToElement(id) {
+              document.getElementById(id).scrollIntoView({
+                   behavior: 'smooth'
+              });
+            }
+        </script>
     </body>
 </html>
